@@ -9,6 +9,7 @@
 /test/
 /tmp/
 /.idea/
+/log/
 
 # Ignore Byebug command history file.
 .byebug_history
@@ -50,3 +51,7 @@ yarn-debug.log*
 
 /config/database.yml
 /config/credentials.yml.enc
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
