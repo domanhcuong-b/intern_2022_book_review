@@ -1,0 +1,26 @@
+<ul class="page-header">
+  <li><h2 class="page-title"><%= t "sign_in" %></h2></li>
+  <%= render "shared/language" %>
+</ul>
+
+<div id="login-container">
+  <%= image_tag "login2.png" %>
+  <div id="login-form">
+    <%= form_for :session, url: login_path do |f| %>
+      <%= f.label t ".email" %>
+      <%= f.email_field :email, class: "form-control input-text" %>
+      <%= f.label t ".password" %>
+      <%= f.password_field :password, class: "form-control input-text" %>
+      <%= f.label :remember_me, class: "checkbox inline" do %>
+        <%= f.check_box :remember_me %>
+        <span><%= t ".remember_me" %></span>
+      <% end %>
+      <%= f.submit t("sign_in"), class: "btn btn-primary button" %>
+    <% end %>
+    <p>
+      <%= t ".new_user" %>
+      <%= link_to t(".sign_up_now"), "#" %>
+    </p>
+    <p><%= link_to t(".forgot_password"), "#" %></p>
+  </div>
+</div>

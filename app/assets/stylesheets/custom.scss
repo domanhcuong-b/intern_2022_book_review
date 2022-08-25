@@ -96,8 +96,82 @@
         padding-bottom: 20px;
         border-bottom: 1px solid $gray-extra-light;
       }
+
+      .page-header {
+        margin: 20px 0;
+        border: none;
+        li {
+          display: inline-block;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          h2, a {
+            font-size: 20px;
+            margin: 0;
+          }
+        }
+
+        .language {
+          float: right;
+          margin-left: 8px;
+        }
+      }
+
+      // Login
+      #login-container {
+        width: 99%;
+        height: 440px;
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+        box-shadow: 10px 10px $light-coffe;
+        border: 2px solid $light-coffe;
+        border-radius: 4px;
+
+        img {
+          height: 100%;
+          flex: 6;
+          object-fit: cover;
+          border: 2px solid $light-coffe;
+        }
+
+        #login-form {
+          flex: 4;
+          padding: 0 60px;
+
+          label {
+            font-weight: normal;
+            margin: 0;
+          }
+
+          .checkbox {
+            height: 36px !important;
+
+            input {
+              margin: 0;
+              display: inline-block;
+              width: 18px;
+              height: 18px;
+            }
+
+            span {
+              margin-left: 28px;
+            }
+          }
+
+          .button {
+            margin-bottom: 16px !important;
+          }
+        }
+      }
     }
   }
+}
+
+.input-text, .button {
+  height: 44px !important;
+  width: 100%;
+  display: block;
+  margin: 0 auto 16px !important;
 }
 
 #wrapper.menuDisplayed {
