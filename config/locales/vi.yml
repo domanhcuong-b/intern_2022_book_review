@@ -1,0 +1,23 @@
+vi:
+  app_name: "Book Star"
+  avatar: "Ảnh đại diện"
+  home: "Trang chủ"
+  book: "Sách"
+  feed: "Bảng tin"
+  history: "Lịch sử"
+  profile: "Trang cá nhân"
+  sign_in: "Đăng nhập"
+  english: "EN"
+  vietnamese: "VI"
+  static_pages:
+    home:
+      quotes: "Sách mở mang tầm nhìn của bạn"
+      welcome: "Chào mừng đến với Book Star"
+  sessions:
+    new:
+      email: "Email"
+      password: "Mật khẩu"
+      sign_up_now: "Đăng ký"
+      new_user: "Không có tài khoản:"
+      remember_me: "Ghi nhớ"
+      forgot_password: "Quên mật khẩu"

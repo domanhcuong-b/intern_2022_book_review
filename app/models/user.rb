@@ -13,7 +13,7 @@ class User < ApplicationRecord
   has_one :picture, as: :ownership, dependent: :destroy
   accepts_nested_attributes_for :picture
 
-  enum role: {user: 0, admin: 1}
+  enum role: {normal_user: 0, admin: 1}
 
   validates :name, presence: true,
             length: {maximum: Settings.user.NAME_MAX_LENGTH}

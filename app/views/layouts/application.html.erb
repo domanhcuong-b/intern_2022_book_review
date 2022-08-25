@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Intern2022BookReview</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
-    <%= javascript_pack_tag "application", "data-turbolinks-track": "reload" %>
+    <title><%= t "app_name" %></title>
+    <%= render "layouts/shim" %>
+    <%= render "layouts/rails_default" %>
   </head>
 
   <body>
-    <%= yield %>
+    <div id="wrapper">
+      <%= render "layouts/sidebar" %>
+      <div id="page-content-wrapper">
+        <div class="btn" id="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div id="container">
+          <h1 id="name-app-header"><%= t "app_name" %></h1>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

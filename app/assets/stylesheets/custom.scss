@@ -1,0 +1,111 @@
+@import 'color.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  a {
+    text-decoration: none !important;
+  }
+}
+
+#wrapper {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+
+  #sidebar-wrapper {
+    z-index: 2;
+    position: fixed;
+    width: 0;
+    height: 100%;
+    overflow-y: hidden;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+
+    .sidebar-avatar {
+      box-sizing: content-box;
+      padding: 50px 0 100px;
+      .avatar {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        vertical-align: middle;
+      }
+    }
+
+    .sidebar-nav {
+      padding: 0;
+      list-style: none;
+      transition: all .5s;
+      width: 100%;
+      text-align: center;
+
+      li {
+        line-height: 40px;
+        width: 100%;
+        transition: all .3s;
+        padding: 10px;
+
+        a {
+          display: block;
+          color: black;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+      }
+
+      li:hover {
+        background: $green-medium-light;
+      }
+    }
+  }
+
+  /* Main Content */
+  #page-content-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    padding: 15px;
+    transition: all .5s;
+
+    #menu-toggle {
+      position: fixed;
+      transition: all .3s;
+      font-size: 3rem;
+    }
+
+    #container {
+      width: 1180px;
+      min-height: 100vh;
+      margin: 0 auto;
+
+      // Header
+      #name-app-header {
+        font-size: 32px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        margin: 0;
+        padding-bottom: 20px;
+        border-bottom: 1px solid $gray-extra-light;
+      }
+    }
+  }
+}
+
+#wrapper.menuDisplayed {
+  #sidebar-wrapper {
+    width: 250px;
+  }
+
+  #page-content-wrapper {
+    padding-left: 250px;
+  }
+}
