@@ -1,14 +1,14 @@
 <div id="sidebar-wrapper">
   <div class="sidebar-avatar">
     <% if logged_in? %>
-      <%= image_tag current_user.picture.url, alt: t("avatar"), class: "avatar" %>
+      <%= image_tag current_user.picture_url, alt: t("avatar"), class: "avatar" %>
     <% else %>
       <%= image_tag "avatar_example.png", alt: t("avatar"), class: "avatar" %>
     <% end %>
   </div>
   <ul class="sidebar-nav">
     <li><%= link_to t("home"), root_path %></li>
-    <li><%= link_to t("book"), "#" %></li>
+    <li><%= link_to t("book"), books_path %></li>
     <% if logged_in? %>
       <li><%= link_to t("feed"), "#" %></li>
       <li><%= link_to t("history"), "#" %></li>

@@ -1,0 +1,8 @@
+<ul class="page-header">
+  <li><h2 class="page-title"><%= t "book_lists" %></h2></li>
+  <%= render "shared/language" %>
+</ul>
+<div id="book-lists">
+  <%= render @books %>
+  <%== pagy_nav @pagy %>
+</div>

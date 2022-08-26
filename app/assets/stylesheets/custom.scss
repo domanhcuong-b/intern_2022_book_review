@@ -72,8 +72,8 @@
     width: 100%;
     min-height: 100vh;
     position: absolute;
-    padding: 15px;
     transition: all .5s;
+    background-color: $green-extra-light;
 
     #menu-toggle {
       position: fixed;
@@ -81,85 +81,159 @@
       font-size: 3rem;
     }
 
-    #container {
-      width: 1180px;
+    #page-container {
+      width: 1300px;
       min-height: 100vh;
       margin: 0 auto;
+      background-color: white;
 
-      // Header
-      #name-app-header {
-        font-size: 32px;
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 8px;
-        margin: 0;
-        padding-bottom: 20px;
-        border-bottom: 1px solid $gray-extra-light;
-      }
+      #container {
+        width: 90%;
+        margin: 0 auto;
 
-      .page-header {
-        margin: 20px 0;
-        border: none;
-        li {
-          display: inline-block;
+        // Header
+        #name-app-header {
+          font-size: 32px;
+          text-align: center;
           text-transform: uppercase;
-          letter-spacing: 2px;
-          h2, a {
-            font-size: 20px;
-            margin: 0;
-          }
+          letter-spacing: 8px;
+          margin: 0;
+          padding: 20px 0;
+          border-bottom: 1px solid $gray-extra-light;
         }
 
-        .language {
-          float: right;
-          margin-left: 8px;
-        }
-      }
-
-      // Login
-      #login-container {
-        width: 99%;
-        height: 440px;
-        display: flex;
-        align-items: center;
-        margin-top: 60px;
-        box-shadow: 10px 10px $light-coffe;
-        border: 2px solid $light-coffe;
-        border-radius: 4px;
-
-        img {
-          height: 100%;
-          flex: 6;
-          object-fit: cover;
-          border: 2px solid $light-coffe;
-        }
-
-        #login-form {
-          flex: 4;
-          padding: 0 60px;
-
-          label {
-            font-weight: normal;
-            margin: 0;
-          }
-
-          .checkbox {
-            height: 36px !important;
-
-            input {
+        .page-header {
+          margin: 20px 0;
+          padding: 0 24px;
+          border: none;
+          li {
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            h2, a {
+              font-size: 20px;
               margin: 0;
-              display: inline-block;
-              width: 18px;
-              height: 18px;
-            }
-
-            span {
-              margin-left: 28px;
             }
           }
 
-          .button {
-            margin-bottom: 16px !important;
+          .language {
+            float: right;
+            margin-left: 8px;
+          }
+        }
+
+        // Login
+        #login-container {
+          width: 99%;
+          height: 440px;
+          display: flex;
+          align-items: center;
+          margin-top: 60px;
+          box-shadow: 10px 10px $light-coffe;
+          border: 2px solid $light-coffe;
+          border-radius: 4px;
+
+          img {
+            height: 100%;
+            flex: 6;
+            object-fit: cover;
+            border: 2px solid $light-coffe;
+          }
+
+          #login-form {
+            flex: 4;
+            padding: 0 60px;
+
+            label {
+              font-weight: normal;
+              margin: 0;
+            }
+
+            .checkbox {
+              height: 36px !important;
+
+              input {
+                margin: 0;
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+              }
+
+              span {
+                margin-left: 28px;
+              }
+            }
+
+            .button {
+              margin-bottom: 16px !important;
+            }
+          }
+        }
+
+        // Book lists
+        #book-lists {
+          min-height: 100vh;
+
+          #book-card-wrapper {
+            width: 25%;
+            min-height: 428px;
+            padding: 0 24px;
+            float: left;
+
+            #book-card {
+              display: flex;
+              flex-direction: column;
+              min-height: 380px;
+              width: 100%;
+              margin-bottom: 48px;
+              box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+              border-radius: 4px;
+
+              #cover {
+                overflow: hidden;
+                flex: 10;
+                max-height: 274px;
+                background-color: $black;
+                img {
+                  width: 100%;
+                  height: auto;
+                  transition: 0.2s ease-in-out;
+                }
+              }
+
+              #information {
+                flex: 3;
+                margin: 12px;
+                color: $black;
+
+                .star {
+                  width: 24px;
+                  height: auto;
+                }
+
+                #rating {
+                  margin-bottom: 12px;
+                  span {
+                    font-size: 14px;
+                    font-weight: bolder;
+                  }
+                }
+
+                #title span {
+                  font-weight: bolder;
+                  text-align-all: center;
+                }
+
+                #author span {
+                  font-size: 13px;
+                }
+              }
+
+              &:hover #cover img {
+                opacity: 0.8;
+                transform: scale(1.05);
+              }
+            }
           }
         }
       }
@@ -181,5 +255,18 @@
 
   #page-content-wrapper {
     padding-left: 250px;
+  }
+}
+
+.pagy-nav.pagination {
+  width: 100%;
+  padding: 24px;
+  margin: 0 0 24px 0;
+  text-align: center;
+
+  span {
+    margin: 8px;
+    text-transform: uppercase;
+    font-weight: bolder;
   }
 }

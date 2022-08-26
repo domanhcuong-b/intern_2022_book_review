@@ -29,6 +29,8 @@ class User < ApplicationRecord
 
   attr_accessor :remember_token
 
+  delegate :url, to: :picture, prefix: true
+
   class << self
     def digest token
       cost = if ActiveModel::SecurePassword.min_cost

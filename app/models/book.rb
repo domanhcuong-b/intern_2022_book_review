@@ -14,7 +14,11 @@ class Book < ApplicationRecord
   validates :title, presence: true
   validates :total_pages,
             numericality: {greater_than: Settings.book.MIN_TOTAL_PAGES}
-  validates :average_rating,
+  validates :average_rating, allow_nil: true,
             numericality: {greater_than_or_equal_to: Settings.book.MIN_RATING,
                            less_than_or_equal_to: Settings.book.MAX_RATING}
+
+  delegate :url, to: :picture, prefix: true
+
+  scope :order_by_time_created, ->{order created_at: :desc}
 end

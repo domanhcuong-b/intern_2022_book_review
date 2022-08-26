@@ -10,6 +10,9 @@ vi:
   sign_in: "Đăng nhập"
   english: "EN"
   vietnamese: "VI"
+  book_lists: "Sách"
+  book_cover: "Bìa sách"
+  no_review: "Chưa có đánh giá"
   static_pages:
     home:
       quotes: "Sách mở mang tầm nhìn của bạn"

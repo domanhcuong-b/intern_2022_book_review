@@ -13,14 +13,16 @@
         <div class="btn" id="menu-toggle">
           <i class="fa-solid fa-bars"></i>
         </div>
-        <div id="container">
-          <h1 id="name-app-header"><%= t "app_name" %></h1>
-          <% flash.each do |message_type, message| %>
-            <div class="alert alert-<%= message_type %>">
-              <%= message %>
-            </div>
-          <% end %>
-          <%= yield %>
+        <div id="page-container">
+          <div id="container">
+            <h1 id="name-app-header"><%= t "app_name" %></h1>
+            <% flash.each do |message_type, message| %>
+              <div class="alert alert-<%= message_type %>">
+                <%= message %>
+              </div>
+            <% end %>
+            <%= yield %>
+          </div>
         </div>
       </div>
     </div>

@@ -10,6 +10,9 @@ en:
   sign_in: "Sign In"
   english: "en"
   vietnamese: "vi"
+  book_lists: "Books lists"
+  book_cover: "Book cover"
+  no_review: "No review"
   static_pages:
     home:
       quotes: "With books you can go places"
