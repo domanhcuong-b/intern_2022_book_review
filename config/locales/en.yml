@@ -6,6 +6,7 @@ en:
   feed: "Feed"
   history: "History"
   profile: "Profile"
+  log_out: "Sign out"
   sign_in: "Sign In"
   english: "en"
   vietnamese: "vi"
@@ -14,6 +15,8 @@ en:
       quotes: "With books you can go places"
       welcome: "Welcome to Book Star"
   sessions:
+    login_fail: "Sign in failed. Please try again!"
+    login_success: "Sign in successfull!"
     new:
       email: "Email"
       password: "Password"

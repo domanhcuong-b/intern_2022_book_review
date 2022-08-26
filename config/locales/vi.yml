@@ -6,6 +6,7 @@ vi:
   feed: "Bảng tin"
   history: "Lịch sử"
   profile: "Trang cá nhân"
+  log_out: "Đăng xuất"
   sign_in: "Đăng nhập"
   english: "EN"
   vietnamese: "VI"
@@ -14,6 +15,8 @@ vi:
       quotes: "Sách mở mang tầm nhìn của bạn"
       welcome: "Chào mừng đến với Book Star"
   sessions:
+    login_fail: "Đăng nhập thất bại. Hãy thử lại!"
+    login_success: "Đăng nhập thành công!"
     new:
       email: "Email"
       password: "Mật khẩu"
