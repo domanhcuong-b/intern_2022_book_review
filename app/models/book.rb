@@ -12,7 +12,7 @@ class Book < ApplicationRecord
   accepts_nested_attributes_for :picture
 
   validates :title, presence: true
-  validates :total_pages,
+  validates :total_pages, allow_nil: true,
             numericality: {greater_than: Settings.book.MIN_TOTAL_PAGES}
   validates :average_rating, allow_nil: true,
             numericality: {greater_than_or_equal_to: Settings.book.MIN_RATING,

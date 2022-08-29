@@ -1,0 +1,37 @@
+<ul class="page-header">
+  <li><h2 class="page-title"><%= t ".book_detail" %></h2></li>
+  <%= render "shared/language" %>
+</ul>
+<div id="book-detail">
+  <div id="book-information">
+    <div id="cover">
+      <%= image_tag get_cover_url(@book), alt: t("book_cover") %>
+    </div>
+    <div id="infor-container">
+      <div id="title" class="infor">
+        <span><%= @book.title %></span>
+      </div>
+      <div id="authors" class="infor">
+        <span class="bold"><%= t ".author" %>:</span>
+        <span class="bold green"><%= get_authors_name @book %></span>
+      </div>
+      <div id="genres" class="infor">
+        <span class="bold"><%= t ".genres" %>:</span>
+        <span class="bold green"><%= get_genres_name @book %></span>
+      </div>
+      <div id="total_pages" class="infor">
+        <span class="bold"><%= t ".total_pages" %>:</span>
+        <span class="bold green"><%= get_total_pages @book %></span>
+      </div>
+      <div id="average_rating" class="infor">
+        <span class="bold"><%= t ".average_rating" %>:</span>
+        <span class="bold green"><%= get_average_rating @book %></span>
+      </div>
+      <div id="description" class="infor">
+        <p><%= @book.description %></p>
+      </div>
+    </div>
+  </div>
+  <div id="review-container">
+  </div>
+</div>

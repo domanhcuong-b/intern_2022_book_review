@@ -2,20 +2,12 @@
   <%= link_to book_path book do %>
     <div id="book-card">
       <div id="cover">
-        <% if book.picture_url %>
-          <%= image_tag book.picture_url, alt: t("book_cover") %>
-        <% else %>
-          <%= image_tag "cover_default.png", alt: t("book_cover") %>
-        <% end %>
+        <%= image_tag get_cover_url(book), alt: t("book_cover") %>
       </div>
       <div id="information">
         <div id="rating" class="info-row">
           <%= image_tag "black_star.png", class: "star" %>
-          <% if book.average_rating %>
-            <span><%= book.average_rating %> / 5.0</span>
-          <% else %>
-            <span><%= t "no_review" %></span>
-          <% end %>
+          <span><%= get_average_rating book %></span>
         </div>
         <div id="title" class="info-row">
           <span><%= book.title %></span>

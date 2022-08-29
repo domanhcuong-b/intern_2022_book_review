@@ -13,6 +13,7 @@ vi:
   book_lists: "Sách"
   book_cover: "Bìa sách"
   no_review: "Chưa có đánh giá"
+  updating: "Đang cập nhật"
   static_pages:
     home:
       quotes: "Sách mở mang tầm nhìn của bạn"
@@ -27,3 +28,11 @@ vi:
       new_user: "Không có tài khoản:"
       remember_me: "Ghi nhớ"
       forgot_password: "Quên mật khẩu"
+  books:
+    book_not_found: "Không tìm thấy sách"
+    show:
+      book_detail: "Thông tin sách"
+      author: "Tác giả"
+      total_pages: "Số trang"
+      average_rating: "Điểm trung bình"
+      genres: "Thể loại"
