@@ -1,0 +1,13 @@
+<%= form_for @review do |f| %>
+  <div class="field" id="rating-star-container">
+    <%= make_star_rating(0).html_safe %>
+  </div>
+  <div class="field">
+    <%= f.text_area :content, placeholder: t("reviews.compose_new_review"),
+                    class: "nunito" %>
+  </div>
+  <%= f.hidden_field :rating %>
+  <%= hidden_field_tag :create_review_action, stars_path %>
+  <%= f.hidden_field :book_id, value: @book.id %>
+  <%= f.submit t("post"), class: "btn btn-primary" %>
+<% end %>

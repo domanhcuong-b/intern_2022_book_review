@@ -11,4 +11,18 @@ module ReviewsHelper
     html << "</div>"
     html
   end
+
+  def make_star_rating rating
+    html = ""
+    Settings.book.MAX_RATING.times do |n|
+      html << if n + 1 <= rating.to_i
+                "<div class=\"rating-star\" data-value=#{n + 1}>
+          <i class=\"fa-solid fa-star\"></i> </div>"
+              else
+                "<div class=\"rating-star\" data-value=#{n + 1}>
+          <i class=\"fa-regular fa-star\"></i> </div>"
+              end
+    end
+    html
+  end
 end

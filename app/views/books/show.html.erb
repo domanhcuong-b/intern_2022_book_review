@@ -34,7 +34,21 @@
   </div>
 
   <div id="review-container">
-    <span class="green bold">
+    <div id="create-review">
+      <span class="header-title green bold">
+        <%= t ".write_review" %>
+      </span>
+      <div id="review-form">
+        <% if Review.find_by user_id: current_user.id, book_id: @book.id %>
+          <span class="nunito">
+            <%= t ".have_reviewed" %>.
+          </span>
+        <% else %>
+          <%= render partial: "reviews/review_form" %>
+        <% end %>
+      </div>
+    </div>
+    <span class="header-title green bold">
       <%= link_to t(".all_reviews"), book_path(@book), class: "green bold" %>:
       <%= @pagy.count %>
     </span>

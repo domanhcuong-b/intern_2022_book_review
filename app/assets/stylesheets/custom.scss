@@ -280,12 +280,22 @@
             margin-bottom: 40px;
             border-top: 1px solid $gray-extra-light;
 
-            > span {
-              font-size: 20px;
-              text-transform: uppercase;
-              letter-spacing: 2px;
-              margin: 20px 0;
-              display: block;
+            #create-review {
+              padding-bottom: 40px;
+              border-bottom: 1px solid $gray-extra-light;
+              textarea {
+                width: 100%;
+                min-height: 160px;
+                padding: 12px;
+              }
+              .field {
+                margin-bottom: 8px;
+              }
+              .rating-star {
+                cursor: pointer;
+                display: inline-block;
+                margin-right: 4px;
+              }
             }
 
             #statistic-review {
@@ -388,4 +398,12 @@
   object-fit: cover;
   border-radius: 50%;
   vertical-align: middle;
+}
+
+.header-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px 0;
+  display: block;
 }

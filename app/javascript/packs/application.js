@@ -43,4 +43,16 @@ document.addEventListener('turbolinks:load', function() {
       dataType: 'script'
     });
   });
+
+  $(document).on('click', '.rating-star', function(event) {
+    let rating = $(this).data('value');
+    let action = $('#create_review_action').val();
+    $('#review_rating').val(rating);
+    $.ajax({
+      url: action,
+      type: 'get',
+      data: {rating: rating},
+      dataType: 'script'
+    });
+  });
 })
