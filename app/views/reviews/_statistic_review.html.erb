@@ -1,0 +1,49 @@
+<div id="statistic-review">
+  <div class="statistic">
+    <span class="bold green">( <%= @reviews_of_book.by_rating(5).count %> )</span>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <%= hidden_field_tag :rating, 5 %>
+  </div>
+  <div class="statistic">
+    <span class="bold green">( <%= @reviews_of_book.by_rating(4).count %> )</span>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <%= hidden_field_tag :rating, 4 %>
+  </div>
+  <div class="statistic">
+    <span class="bold green">( <%= @reviews_of_book.by_rating(3).count %> )</span>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <%= hidden_field_tag :rating, 3 %>
+  </div>
+  <div class="statistic">
+    <span class="bold green">( <%= @reviews_of_book.by_rating(2).count %> )</span>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <%= hidden_field_tag :rating, 2 %>
+  </div>
+  <div class="statistic">
+    <span class="bold green">( <%= @reviews_of_book.by_rating(1).count %> )</span>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <%= hidden_field_tag :rating, 1 %>
+  </div>
+  <%= hidden_field_tag :action, reviews_path %>
+  <%= hidden_field_tag :book_id, @book.id %>
+</div>

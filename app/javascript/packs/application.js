@@ -29,4 +29,18 @@ document.addEventListener('turbolinks:load', function() {
     }
     sessionStorage.setItem('open_side_bar', openSideBar);
   });
+
+  // Filter rating listener
+  $('.statistic').click(function(event) {
+    let rating = $(this).children('#rating').val();
+    let action = $('#action').val();
+    let book_id = $('#book_id').val();
+    $.ajax({
+      url: action,
+      type: 'get',
+      data: {rating: rating,
+        book_id: book_id},
+      dataType: 'script'
+    });
+  });
 })

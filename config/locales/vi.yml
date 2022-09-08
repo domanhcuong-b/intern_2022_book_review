@@ -36,3 +36,6 @@ vi:
       total_pages: "Số trang"
       average_rating: "Điểm trung bình"
       genres: "Thể loại"
+      all_reviews: "Số bài đánh giá"
+  users:
+    user_not_found: "Không tìm thấy người dùng"

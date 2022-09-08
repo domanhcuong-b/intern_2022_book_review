@@ -36,3 +36,6 @@ en:
       total_pages: "Total pages"
       average_rating: "Average rating"
       genres: "Genres"
+      all_reviews: "All reviews"
+  users:
+    user_not_found: "User not found"
