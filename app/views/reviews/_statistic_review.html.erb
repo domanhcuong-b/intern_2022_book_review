@@ -1,0 +1,9 @@
+<div id="statistic-review">
+  <%= make_statistic(5, @reviews_of_book).html_safe %>
+  <%= make_statistic(4, @reviews_of_book).html_safe %>
+  <%= make_statistic(3, @reviews_of_book).html_safe %>
+  <%= make_statistic(2, @reviews_of_book).html_safe %>
+  <%= make_statistic(1, @reviews_of_book).html_safe %>
+  <%= hidden_field_tag :action, reviews_path %>
+  <%= hidden_field_tag :book_id, @book.id %>
+</div>

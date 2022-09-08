@@ -31,13 +31,6 @@
     .sidebar-avatar {
       box-sizing: content-box;
       padding: 50px 0 100px;
-      .avatar {
-        width: 120px;
-        height: 120px;
-        object-fit: cover;
-        border-radius: 50%;
-        vertical-align: middle;
-      }
     }
 
     .sidebar-nav {
@@ -239,7 +232,6 @@
 
         // Book detail
         #book-detail {
-          min-height: 100vh;
           padding: 0 24px;
           margin-top: 40px;
 
@@ -277,8 +269,67 @@
               }
 
               #description {
-                margin-top: 24px;
                 text-align: justify;
+                white-space: pre-line;
+              }
+            }
+          }
+
+          // Review under book information
+          #review-container {
+            margin-bottom: 40px;
+            border-top: 1px solid $gray-extra-light;
+
+            > span {
+              font-size: 20px;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              margin: 20px 0;
+              display: block;
+            }
+
+            #statistic-review {
+              margin-bottom: 40px;
+
+              .statistic {
+                float: left;
+                margin-right: 40px;
+                padding: 12px;
+                border: 1px solid;
+                border-image: linear-gradient(45deg, turquoise, greenyellow) 1;
+
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .review-card {
+              margin: 12px 0;
+              padding: 16px 0;
+              display: flex;
+
+              .image {
+                flex: 2;
+                .avatar {
+                  width: 60px;
+                  height: 60px;
+                }
+              }
+
+              .infor {
+                flex: 28;
+                margin: 6px 0;
+
+                .review-content {
+                  background-color: $green-extra-light;
+                  padding: 0 24px;
+                  margin-top: 12px;
+                  border-radius: 4px;
+                  text-align: justify;
+                  letter-spacing: 0.5px;
+                  white-space: pre-line;
+                }
               }
             }
           }
@@ -324,4 +375,17 @@
 
 .green {
   color: $green;
+}
+
+.nunito {
+  font-family: 'Nunito';
+  font-size: 18px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  vertical-align: middle;
 }

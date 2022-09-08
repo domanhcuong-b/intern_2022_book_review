@@ -1,0 +1,23 @@
+<div class="review-card">
+  <% user = find_user_by_id review.user_id %>
+  <div class="image">
+    <%= image_tag get_avatar_url(user), alt: t("avatar"), class: "avatar" %>
+  </div>
+  <div class="infor">
+    <div class="user-name">
+      <%= link_to user.name, user_path(user), class: "bold green" %>
+    </div>
+    <div class="rating">
+      <% Settings.book.MAX_RATING.times do |n| %>
+        <% if n + 1 <= review.rating %>
+          <i class="fa-solid fa-star"></i>
+        <% else %>
+          <i class="fa-regular fa-star"></i>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="review-content nunito">
+      <p><%= review.content %></p>
+    </div>
+  </div>
+</div>

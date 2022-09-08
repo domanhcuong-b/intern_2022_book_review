@@ -27,11 +27,23 @@
         <span class="bold"><%= t ".average_rating" %>:</span>
         <span class="bold green"><%= get_average_rating @book %></span>
       </div>
-      <div id="description" class="infor">
+      <div id="description" class="infor nunito">
         <p><%= @book.description %></p>
       </div>
     </div>
   </div>
+
   <div id="review-container">
+    <span class="green bold">
+      <%= link_to t(".all_reviews"), book_path(@book), class: "green bold" %>:
+      <%= @pagy.count %>
+    </span>
+    <% unless @reviews_of_book.blank? %>
+      <%= render "reviews/statistic_review" %>
+      <div id="reviews_list">
+        <%= render partial: "reviews/reviews", locals: {reviews: @reviews} %>
+        <%== pagy_nav @pagy %>
+      </div>
+    <% end %>
   </div>
 </div>

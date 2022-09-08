@@ -9,3 +9,5 @@ book:
   MAX_RATING: 5
   MIN_TOTAL_PAGES: 0
   BOOK_PER_PAGE: 24
+review:
+  REVIEW_PER_PAGE: 5

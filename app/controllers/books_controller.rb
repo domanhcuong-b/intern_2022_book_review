@@ -6,7 +6,11 @@ class BooksController < ApplicationController
                          items: Settings.book.BOOK_PER_PAGE
   end
 
-  def show; end
+  def show
+    @reviews_of_book = Review.by_book_id(@book.id).order_by_time_created
+    @pagy, @reviews = pagy @reviews_of_book,
+                           items: Settings.review.REVIEW_PER_PAGE
+  end
 
   private
 
