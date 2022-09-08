@@ -1,0 +1,12 @@
+<%= form_for @review do |f| %>
+  <div class="field">
+    <%= f.text_area :rating, placeholder: t("reviews.compose_new_review") %>
+  </div>
+  <div class="field">
+    <%= f.text_area :content, placeholder: t("reviews.compose_new_review") %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :book_id, value: @book.id %>
+  </div>
+  <%= f.submit t("post"), class: "btn btn-primary" %>
+<% end %>

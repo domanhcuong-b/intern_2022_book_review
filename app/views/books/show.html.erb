@@ -34,7 +34,13 @@
   </div>
 
   <div id="review-container">
-    <span class="green bold">
+    <div id="create-review">
+      <span class="header-title green bold">
+        <%= t ".write_review" %>
+      </span>
+      <%= render partial: "reviews/review_form", locals: {review: @reviews[0]} %>
+    </div>
+    <span class="header-title green bold">
       <%= link_to t(".all_reviews"), book_path(@book), class: "green bold" %>:
       <%= @pagy.count %>
     </span>

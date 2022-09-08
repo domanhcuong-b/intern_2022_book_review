@@ -7,6 +7,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    @review = Review.new
     @reviews_of_book = Review.by_book_id(@book.id).order_by_time_created
     @pagy, @reviews = pagy @reviews_of_book,
                            items: Settings.review.REVIEW_PER_PAGE

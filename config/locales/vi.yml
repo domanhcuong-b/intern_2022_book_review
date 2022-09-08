@@ -14,6 +14,8 @@ vi:
   book_cover: "Bìa sách"
   no_review: "Chưa có đánh giá"
   updating: "Đang cập nhật"
+  post: "Đăng"
+  please_log_in: "Cần đăng nhập để thực hiện hành động này"
   static_pages:
     home:
       quotes: "Sách mở mang tầm nhìn của bạn"
@@ -37,5 +39,11 @@ vi:
       average_rating: "Điểm trung bình"
       genres: "Thể loại"
       all_reviews: "Số bài đánh giá"
+      write_review: "Viết đánh giá"
   users:
     user_not_found: "Không tìm thấy người dùng"
+  reviews:
+    compose_new_review: "Viết bài đánh giá của bạn"
+    create:
+      success: "Hệ thống đã ghi nhận đánh giá của bạn"
+      fail: "Đánh giá thất bại"

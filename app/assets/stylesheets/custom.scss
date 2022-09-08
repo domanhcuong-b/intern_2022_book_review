@@ -280,14 +280,6 @@
             margin-bottom: 40px;
             border-top: 1px solid $gray-extra-light;
 
-            > span {
-              font-size: 20px;
-              text-transform: uppercase;
-              letter-spacing: 2px;
-              margin: 20px 0;
-              display: block;
-            }
-
             #statistic-review {
               margin-bottom: 40px;
 
@@ -388,4 +380,12 @@
   object-fit: cover;
   border-radius: 50%;
   vertical-align: middle;
+}
+
+.header-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px 0;
+  display: block;
 }

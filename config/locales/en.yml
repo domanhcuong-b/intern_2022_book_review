@@ -14,6 +14,8 @@ en:
   book_cover: "Book cover"
   no_review: "No review"
   updating: "Updating"
+  post: "Post"
+  please_log_in: "Please log in to do this action"
   static_pages:
     home:
       quotes: "With books you can go places"
@@ -37,5 +39,9 @@ en:
       average_rating: "Average rating"
       genres: "Genres"
       all_reviews: "All reviews"
+      write_review: "Write your review"
   users:
     user_not_found: "User not found"
+  reviews:
+    compose_new_review: "Compose new review"
+

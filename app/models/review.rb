@@ -1,4 +1,6 @@
 class Review < ApplicationRecord
+  CREATEABLE_ATTRS = %i(rating content book_id).freeze
+
   belongs_to :user
   belongs_to :book
 
