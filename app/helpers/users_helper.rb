@@ -16,4 +16,8 @@ module UsersHelper
   def can_delete_review? review
     current_user.admin? || current_user.id == review.user_id
   end
+
+  def can_update_review? review
+    current_user.id == review.user_id
+  end
 end

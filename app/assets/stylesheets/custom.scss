@@ -283,19 +283,6 @@
             #create-review {
               padding-bottom: 40px;
               border-bottom: 1px solid $gray-extra-light;
-              textarea {
-                width: 100%;
-                min-height: 160px;
-                padding: 12px;
-              }
-              .field {
-                margin-bottom: 8px;
-              }
-              .rating-star {
-                cursor: pointer;
-                display: inline-block;
-                margin-right: 4px;
-              }
             }
 
             #statistic-review {
@@ -413,4 +400,37 @@
   letter-spacing: 2px;
   margin: 20px 0;
   display: block;
+}
+
+textarea {
+  width: 100%;
+  min-height: 160px;
+  padding: 12px;
+  letter-spacing: 0.5px;
+  background-color: $green-extra-light;
+  border: solid 2px $green;
+  border-radius: 4px;
+}
+
+.field {
+  margin-bottom: 8px;
+}
+
+.rating-star {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.my-button {
+  background-color: $green-button-normal !important;
+  cursor: pointer;
+  min-width: 80px;
+  height: 40px;
+  border: none !important;
+  font-weight: bold !important;
+
+  &:hover {
+    background-color: $green-button-hover !important;
+  }
 }

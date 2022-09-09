@@ -44,7 +44,8 @@
             <%= t ".have_reviewed" %>.
           </span>
         <% else %>
-          <%= render partial: "reviews/review_form" %>
+          <%= render partial: "reviews/review_form",
+                     locals: {button_text: t("post")} %>
         <% end %>
       </div>
     </div>

@@ -15,6 +15,7 @@ en:
   no_review: "No review"
   updating: "Updating"
   post: "Post"
+  save: "Save"
   please_log_in: "Please log in to do this action"
   update: "Update"
   delete: "Delete"
@@ -47,10 +48,15 @@ en:
     user_not_found: "User not found"
   reviews:
     compose_new_review: "Compose new review..."
-    not_allow: "You are not allow to delete this review"
+    not_allow_delete: "You are not allow to delete this review"
+    not_allow_update: "You are not allow to update this review"
+    review_not_found: "Review not found"
     create:
       success: "Create review successful"
       fail: "Fail review"
     destroy:
       success: "Delete review successful"
       fail: "Delete review fail, please try again!"
+    update:
+      success: "Update review successful"
+      fail: "Update review fail, please try again!"

@@ -1,4 +1,4 @@
-<div class="review-card">
+<div class="review-card" id="review-card-<%= review.id %>">
   <% user = find_user_by_id review.user_id %>
   <div class="image">
     <%= image_tag get_avatar_url(user), alt: t("avatar"), class: "avatar" %>
@@ -7,23 +7,27 @@
     <div class="user-name">
       <%= link_to user.name, user_path(user), class: "bold green" %>
     </div>
-    <div class="rating">
-      <% Settings.book.MAX_RATING.times do |n| %>
-        <% if n + 1 <= review.rating %>
-          <i class="fa-solid fa-star"></i>
-        <% else %>
-          <i class="fa-regular fa-star"></i>
+    <div class="form">
+      <div class="rating">
+        <% Settings.book.MAX_RATING.times do |n| %>
+          <% if n + 1 <= review.rating %>
+            <i class="fa-solid fa-star"></i>
+          <% else %>
+            <i class="fa-regular fa-star"></i>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
-    <div class="review-content nunito">
-      <p><%= review.content %></p>
-    </div>
-    <% if can_delete_review? review %>
-      <div class="review-action bold">
-        <%= link_to t("update"), "#" %>
-        <%= link_to t("delete"), review_path(review), method: :delete %>
       </div>
-    <% end %>
+      <div class="review-content nunito">
+        <p><%= review.content %></p>
+      </div>
+      <div class="review-action bold">
+        <% if can_update_review? review %>
+          <%= link_to t("update"), edit_review_path(review), remote: true %>
+        <% end %>
+        <% if can_delete_review? review %>
+          <%= link_to t("delete"), review_path(review), method: :delete %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

@@ -15,6 +15,7 @@ vi:
   no_review: "Chưa có đánh giá"
   updating: "Đang cập nhật"
   post: "Đăng"
+  save: "Lưu"
   please_log_in: "Cần đăng nhập để thực hiện hành động này"
   update: "Sửa"
   delete: "Xóa"
@@ -47,10 +48,15 @@ vi:
     user_not_found: "Không tìm thấy người dùng"
   reviews:
     compose_new_review: "Viết bài đánh giá của bạn..."
-    not_allow: "Bạn không có quyền xóa nhận xét này"
+    not_allow_delete: "Bạn không có quyền xóa nhận xét này"
+    not_allow_update: "Bạn không có quyền chỉnh sửa bài đánh giá này"
+    review_not_found: "Không tìm thấy bài đánh giá"
     create:
       success: "Hệ thống đã ghi nhận đánh giá của bạn"
       fail: "Đánh giá thất bại"
     destroy:
       success: "Xóa nhận xét thành công"
       fail: "Xóa nhận xét thất bại, mời thử lại."
+    update:
+      success: "Cập nhật bài đánh giá thành công"
+      fail: "Cập nhật bài đánh giá thất bại, mời thử lại."
