@@ -12,4 +12,8 @@ module UsersHelper
 
     user.picture_url
   end
+
+  def can_delete_review? review
+    current_user.admin? || current_user.id == review.user_id
+  end
 end

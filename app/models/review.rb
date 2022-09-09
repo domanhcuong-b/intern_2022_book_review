@@ -14,6 +14,7 @@ class Review < ApplicationRecord
   scope :by_rating, ->(rating){where rating: rating}
 
   after_save :update_book_rating
+  after_destroy :update_book_rating
 
   private
 

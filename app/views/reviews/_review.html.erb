@@ -19,5 +19,11 @@
     <div class="review-content nunito">
       <p><%= review.content %></p>
     </div>
+    <% if can_delete_review? review %>
+      <div class="review-action bold">
+        <%= link_to t("update"), "#" %>
+        <%= link_to t("delete"), review_path(review), method: :delete %>
+      </div>
+    <% end %>
   </div>
 </div>

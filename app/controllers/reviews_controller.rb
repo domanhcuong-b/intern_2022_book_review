@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
-  before_action :logged_in_user, only: :create
+  before_action :logged_in_user, only: %i(create destroy)
+  before_action :check_delete_permission, only: :destroy
 
   def index
     book_id = params[:book_id]
@@ -23,9 +24,26 @@ class ReviewsController < ApplicationController
     redirect_to book_path create_params[:book_id]
   end
 
+  def destroy
+    if @review.destroy
+      flash[:success] = t ".success"
+    else
+      flash[:danger] = t ".fail"
+    end
+    redirect_to book_path @review.book_id
+  end
+
   private
 
   def review_params
     params.require(:review).permit(Review::CREATEABLE_ATTRS)
+  end
+
+  def check_delete_permission
+    @review = Review.find_by id: params[:id]
+    return @review if can_delete_review? @review
+
+    flash[:danger] = t ".not_allow"
+    redirect_to book_path @review.book_id
   end
 end

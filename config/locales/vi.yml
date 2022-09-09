@@ -16,6 +16,8 @@ vi:
   updating: "Đang cập nhật"
   post: "Đăng"
   please_log_in: "Cần đăng nhập để thực hiện hành động này"
+  update: "Sửa"
+  delete: "Xóa"
   static_pages:
     home:
       quotes: "Sách mở mang tầm nhìn của bạn"
@@ -45,6 +47,10 @@ vi:
     user_not_found: "Không tìm thấy người dùng"
   reviews:
     compose_new_review: "Viết bài đánh giá của bạn..."
+    not_allow: "Bạn không có quyền xóa nhận xét này"
     create:
       success: "Hệ thống đã ghi nhận đánh giá của bạn"
       fail: "Đánh giá thất bại"
+    destroy:
+      success: "Xóa nhận xét thành công"
+      fail: "Xóa nhận xét thất bại, mời thử lại."

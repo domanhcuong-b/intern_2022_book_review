@@ -16,6 +16,8 @@ en:
   updating: "Updating"
   post: "Post"
   please_log_in: "Please log in to do this action"
+  update: "Update"
+  delete: "Delete"
   static_pages:
     home:
       quotes: "With books you can go places"
@@ -45,6 +47,10 @@ en:
     user_not_found: "User not found"
   reviews:
     compose_new_review: "Compose new review..."
+    not_allow: "You are not allow to delete this review"
     create:
       success: "Create review successful"
       fail: "Fail review"
+    destroy:
+      success: "Delete review successful"
+      fail: "Delete review fail, please try again!"
