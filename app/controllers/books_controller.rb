@@ -1,9 +1,18 @@
 class BooksController < ApplicationController
+  include GenresHelper
+
   before_action :find_book_by_id, only: :show
 
   def index
-    @pagy, @books = pagy Book.order_by_time_created,
-                         items: Settings.book.BOOK_PER_PAGE
+    @all_books = Book.order_by_time_created
+    if params[:search_text].present?
+      @all_books = @all_books.by_title(params[:search_text])
+    end
+    if params[:genre_id].present?
+      @all_books = @all_books.joins(:genres)
+                             .where(genres: {id: params[:genre_id]})
+    end
+    @pagy, @books = pagy @all_books, items: Settings.book.BOOK_PER_PAGE
   end
 
   def show

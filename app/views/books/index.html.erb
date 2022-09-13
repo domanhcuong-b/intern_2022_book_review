@@ -1,8 +1,24 @@
 <ul class="page-header">
   <li><h2 class="page-title"><%= t "book_lists" %></h2></li>
   <%= render "shared/language" %>
+  <div id="search-book-form">
+    <%= form_tag books_path, method: :get do %>
+      <%= text_field_tag :search_text, params[:search_text],
+                         placeholder: t(".enter_book_title"),
+                         class: "input-text nunito" %>
+      <%= select_tag :genre_id, options_for_select(get_genres_for_filter),
+                     class: "input-select nunito" %>
+      <%= submit_tag t("search"), class: "btn btn-primary my-button" %>
+    <% end %>
+  </div>
 </ul>
-<div id="book-lists">
-  <%= render @books %>
-  <%== pagy_nav @pagy %>
-</div>
+<% if @all_books.present? %>
+  <div id="book-lists">
+    <%= render @books %>
+    <%== pagy_nav @pagy %>
+  </div>
+<% else %>
+  <span class="header-title green bold notification">
+    <%= t ".no_book_found" %>
+  </span>
+<% end %>

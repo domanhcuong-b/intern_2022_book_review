@@ -21,4 +21,6 @@ class Book < ApplicationRecord
   delegate :url, to: :picture, prefix: true
 
   scope :order_by_time_created, ->{order created_at: :desc}
+  scope :by_title, ->(input_text){where("title like ?", "%#{input_text}%")}
+  scope :by_genre, ->(genre_id){where genre_id: genre_id}
 end
