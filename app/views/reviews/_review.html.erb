@@ -4,8 +4,15 @@
     <%= image_tag get_avatar_url(user), alt: t("avatar"), class: "avatar" %>
   </div>
   <div class="infor">
-    <div class="user-name">
-      <%= link_to user.name, user_path(user), class: "bold green" %>
+    <div class="user-name bold nunito">
+      <% if show_book_title %>
+        <% book = Book.find_by id: review.book_id %>
+        <%= link_to user.name, user_path(user), class: "green" %>
+        <span><%= t "reviewed_for" %></span>
+        <%= link_to book.title, book_path(book), class: "green" %>
+      <% else %>
+        <%= link_to user.name, user_path(user), class: "green" %>
+      <% end %>
     </div>
     <div class="form">
       <div class="rating">
@@ -20,14 +27,16 @@
       <div class="review-content nunito">
         <p><%= review.content %></p>
       </div>
-      <div class="review-action bold">
-        <% if can_update_review? review %>
-          <%= link_to t("update"), edit_review_path(review), remote: true %>
-        <% end %>
-        <% if can_delete_review? review %>
-          <%= link_to t("delete"), review_path(review), method: :delete %>
-        <% end %>
-      </div>
+      <% if logged_in? %>
+        <div class="review-action bold">
+          <% if can_update_review? review %>
+            <%= link_to t("update"), edit_review_path(review), remote: true %>
+          <% end %>
+          <% if can_delete_review? review %>
+            <%= link_to t("delete"), review_path(review), method: :delete %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

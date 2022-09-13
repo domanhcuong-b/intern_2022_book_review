@@ -11,6 +11,7 @@ class Review < ApplicationRecord
 
   scope :order_by_time_created, ->{order created_at: :desc}
   scope :by_book_id, ->(book_id){where book_id: book_id}
+  scope :by_user_id, ->(user_id){where user_id: user_id}
   scope :by_rating, ->(rating){where rating: rating}
 
   after_save :update_book_rating
