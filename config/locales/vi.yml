@@ -19,6 +19,8 @@ vi:
   please_log_in: "Cần đăng nhập để thực hiện hành động này"
   update: "Sửa"
   delete: "Xóa"
+  select_genre: "Chọn thể loại"
+  search: "Tìm kiếm"
   static_pages:
     home:
       quotes: "Sách mở mang tầm nhìn của bạn"
@@ -44,6 +46,9 @@ vi:
       all_reviews: "Số bài đánh giá"
       write_review: "Viết đánh giá"
       have_reviewed: "Bạn đã đánh giá cuốn sách này"
+    index:
+      enter_book_title: "Nhập tên sách..."
+      no_book_found: "Không có cuốn sách nào được tìm thấy"
   users:
     user_not_found: "Không tìm thấy người dùng"
   reviews:
