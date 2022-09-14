@@ -11,6 +11,7 @@ class Review < ApplicationRecord
 
   scope :order_by_time_created, ->{order created_at: :desc}
   scope :by_book_id, ->(book_id){where book_id: book_id}
+  scope :by_user_id, ->(user_id){where user_id: user_id}
   scope :by_rating, ->(rating){where rating: rating}
 
   after_save :update_book_rating
@@ -21,6 +22,8 @@ class Review < ApplicationRecord
   def update_book_rating
     book = Book.find_by id: book_id
     reviews = Review.by_book_id(book_id)
+    return book.update_attribute :average_rating, nil if reviews.blank?
+
     new_average_rating = (reviews.sum(:rating).to_f / reviews.count).round(1)
     book.update_attribute :average_rating, new_average_rating
   end

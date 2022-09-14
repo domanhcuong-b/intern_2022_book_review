@@ -61,4 +61,8 @@ class User < ApplicationRecord
 
     BCrypt::Password.new(digest).is_password? token
   end
+
+  def had_review? book_id
+    reviews.find_by book_id: book_id
+  end
 end

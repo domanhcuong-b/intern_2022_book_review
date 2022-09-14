@@ -1,1 +1,1 @@
-$('#reviews_list').html('<%= j render("reviews/reviews", reviews: @reviews) %>');
+$('#reviews_list').html('<%= j render partial: "reviews/reviews", locals: {reviews: @reviews, show_book_title: false} %>');

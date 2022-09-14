@@ -32,4 +32,12 @@ module BooksHelper
 
     book.total_pages
   end
+
+  def find_book_by_input_id book_id
+    book = Book.find_by id: book_id
+    return book if book
+
+    flash[:warning] = t "books.book_not_found"
+    redirect_to books_path
+  end
 end

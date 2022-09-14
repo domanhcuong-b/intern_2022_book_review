@@ -21,6 +21,7 @@ en:
   delete: "Delete"
   select_genre: "Select genre"
   search: "Search"
+  reviewed_for: "reviewed for"
   static_pages:
     home:
       quotes: "With books you can go places"
@@ -46,11 +47,14 @@ en:
       all_reviews: "All reviews"
       write_review: "Write your review"
       have_reviewed: "You have reviewd before"
+      sign_in_to_review: "You must sign in to review"
     index:
       enter_book_title: "Type book's title..."
       no_book_found: "No book found"
   users:
     user_not_found: "User not found"
+    show:
+      personal_page: "Personal page"
   reviews:
     compose_new_review: "Compose new review..."
     not_allow_delete: "You are not allow to delete this review"

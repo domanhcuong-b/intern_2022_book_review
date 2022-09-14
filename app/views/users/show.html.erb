@@ -1,0 +1,28 @@
+<ul class="page-header">
+  <li><h2 class="page-title"><%= t ".personal_page" %></h2></li>
+  <%= render "shared/language" %>
+</ul>
+<div id="personal-page" class="information-detail">
+  <div id="user-information" class="information bold nunito">
+    <%= image_tag @user.picture_url, alt: t("avatar") %>
+    <div class="other-infor">
+      <div class="name">
+        <span>Name: </span>
+        <span class="green"><%= @user.name %></span>
+      </div>
+      <div class="email">
+        <span>Email: </span>
+        <span class="green"><%= @user.email %></span>
+      </div>
+    </div>
+  </div>
+  <% if @reviews.present? %>
+    <div id="review-container">
+      <div id="reviews_list">
+        <%= render partial: "reviews/reviews",
+                   locals: {reviews: @reviews, show_book_title: true} %>
+        <%== pagy_nav @pagy %>
+      </div>
+    </div>
+  <% end %>
+</div>

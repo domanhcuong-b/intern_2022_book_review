@@ -21,6 +21,7 @@ vi:
   delete: "Xóa"
   select_genre: "Chọn thể loại"
   search: "Tìm kiếm"
+  reviewed_for: "đánh giá cho"
   static_pages:
     home:
       quotes: "Sách mở mang tầm nhìn của bạn"
@@ -46,11 +47,14 @@ vi:
       all_reviews: "Số bài đánh giá"
       write_review: "Viết đánh giá"
       have_reviewed: "Bạn đã đánh giá cuốn sách này"
+      sign_in_to_review: "Bạn phải đăng nhập để đánh giá"
     index:
       enter_book_title: "Nhập tên sách..."
       no_book_found: "Không có cuốn sách nào được tìm thấy"
   users:
     user_not_found: "Không tìm thấy người dùng"
+    show:
+      personal_page: "Trang cá nhân"
   reviews:
     compose_new_review: "Viết bài đánh giá của bạn..."
     not_allow_delete: "Bạn không có quyền xóa nhận xét này"

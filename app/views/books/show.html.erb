@@ -2,8 +2,8 @@
   <li><h2 class="page-title"><%= t ".book_detail" %></h2></li>
   <%= render "shared/language" %>
 </ul>
-<div id="book-detail">
-  <div id="book-information">
+<div id="book-detail" class="information-detail">
+  <div id="book-information" class="information">
     <div id="cover">
       <%= image_tag get_cover_url(@book), alt: t("book_cover") %>
     </div>
@@ -33,19 +33,25 @@
     </div>
   </div>
 
-  <div id="review-container">
+  <div id="review-container" class="review-container">
     <div id="create-review">
       <span class="header-title green bold">
         <%= t ".write_review" %>
       </span>
       <div id="review-form">
-        <% if Review.find_by user_id: current_user.id, book_id: @book.id %>
-          <span class="nunito">
-            <%= t ".have_reviewed" %>.
-          </span>
+        <% if logged_in? %>
+          <% if current_user.had_review? @book.id %>
+            <span class="nunito">
+              <%= t ".have_reviewed" %>.
+            </span>
+          <% else %>
+            <%= render partial: "reviews/review_form",
+                       locals: {button_text: t("post")} %>
+          <% end %>
         <% else %>
-          <%= render partial: "reviews/review_form",
-                     locals: {button_text: t("post")} %>
+          <span class="nunito">
+            <%= t ".sign_in_to_review" %>.
+          </span>
         <% end %>
       </div>
     </div>
@@ -56,7 +62,8 @@
     <% unless @reviews_of_book.blank? %>
       <%= render "reviews/statistic_review" %>
       <div id="reviews_list">
-        <%= render partial: "reviews/reviews", locals: {reviews: @reviews} %>
+        <%= render partial: "reviews/reviews",
+                   locals: {reviews: @reviews, show_book_title: false} %>
         <%== pagy_nav @pagy %>
       </div>
     <% end %>
