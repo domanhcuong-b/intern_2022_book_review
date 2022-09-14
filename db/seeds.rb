@@ -56,3 +56,10 @@ book_id = Book.last.id
                           content: review_content,
                           rating: n % 5 + 1)
 end
+
+# Add follow
+user = users.first
+following = users[2..29]
+followers = users[3..19]
+following.each { |followed| user.follow followed }
+followers.each { |follower| follower.follow user }

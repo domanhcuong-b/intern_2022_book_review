@@ -13,6 +13,7 @@ class Review < ApplicationRecord
   scope :by_book_id, ->(book_id){where book_id: book_id}
   scope :by_user_id, ->(user_id){where user_id: user_id}
   scope :by_rating, ->(rating){where rating: rating}
+  scope :by_user_ids, ->(user_ids){where user_id: user_ids}
 
   after_save :update_book_rating
   after_destroy :update_book_rating

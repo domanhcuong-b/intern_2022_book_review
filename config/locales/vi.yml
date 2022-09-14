@@ -22,6 +22,12 @@ vi:
   select_genre: "Chọn thể loại"
   search: "Tìm kiếm"
   reviewed_for: "đánh giá cho"
+  follow: "Theo dõi"
+  unfollow: "Hủy theo dõi"
+  followers: "Số người theo dõi"
+  following: "Số người bạn đang theo dõi"
+  name: "Tên"
+  email: "Email"
   static_pages:
     home:
       quotes: "Sách mở mang tầm nhìn của bạn"
@@ -69,3 +75,6 @@ vi:
     update:
       success: "Cập nhật bài đánh giá thành công"
       fail: "Cập nhật bài đánh giá thất bại, mời thử lại."
+  users_relationships:
+    followed_user_not_found: "Không tìm thấy người mà bạn đang theo dõi"
+    not_found_relationship: "Không tìm thấy mối quan hệ với người dùng "

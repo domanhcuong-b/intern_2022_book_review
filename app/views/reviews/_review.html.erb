@@ -27,6 +27,9 @@
       <div class="review-content nunito">
         <p><%= review.content %></p>
       </div>
+      <div class="create-at nunito">
+        <span><%= get_time_create review %></span>
+      </div>
       <% if logged_in? %>
         <div class="review-action bold">
           <% if can_update_review? review %>

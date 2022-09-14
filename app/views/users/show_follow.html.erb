@@ -1,0 +1,12 @@
+<ul class="page-header">
+  <li><h2 class="page-title"><%= @title %></h2></li>
+  <%= render "shared/language" %>
+</ul>
+<div id="follow-lists" class="information-detail">
+  <% if @users.any? %>
+    <ul>
+      <%= render @users %>
+    </ul>
+    <%== pagy_nav @pagy %>
+  <% end %>
+</div>

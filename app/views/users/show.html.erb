@@ -6,14 +6,27 @@
   <div id="user-information" class="information bold nunito">
     <%= image_tag @user.picture_url, alt: t("avatar") %>
     <div class="other-infor">
-      <div class="name">
-        <span>Name: </span>
+      <div class="infor-row">
+        <span><%= t "name" %>:</span>
         <span class="green"><%= @user.name %></span>
       </div>
-      <div class="email">
-        <span>Email: </span>
+      <div class="infor-row">
+        <span><%= t "email" %>:</span>
         <span class="green"><%= @user.email %></span>
       </div>
+      <div class="infor-row">
+        <%= link_to following_user_path @user do %>
+          <span><%= t "following" %>:</span>
+          <span class="green"><%= @user.following.count %></span>
+        <% end %>
+      </div>
+      <div class="infor-row">
+        <%= link_to followers_user_path @user do %>
+            <span><%= t "followers" %>:</span>
+            <span id="followers" class="green"><%= @user.followers.count %></span>
+        <% end %>
+      </div>
+      <%= render "follow_form" if logged_in? %>
     </div>
   </div>
   <% unless @all_reviews.blank? %>

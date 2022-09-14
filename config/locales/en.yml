@@ -22,6 +22,12 @@ en:
   select_genre: "Select genre"
   search: "Search"
   reviewed_for: "reviewed for"
+  follow: "Follow"
+  unfollow: "Unfollow"
+  followers: "Followers"
+  following: "Following"
+  name: "Name"
+  email: "Email"
   static_pages:
     home:
       quotes: "With books you can go places"
@@ -69,3 +75,6 @@ en:
     update:
       success: "Update review successful"
       fail: "Update review fail, please try again!"
+  users_relationships:
+    followed_user_not_found: "Not found followed user"
+    not_found_relationship: "Not found relationship with this user"

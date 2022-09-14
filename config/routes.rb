@@ -5,8 +5,14 @@ Rails.application.routes.draw do
     post "/login", to: "sessions#create"
     delete "/logout", to: "sessions#destroy"
     resources :books, only: %i(index show)
-    resources :users, only: :show
+    resources :users do
+      member do
+        get :following, to: "following#index"
+        get :followers, to: "followers#index"
+      end
+    end
     resources :reviews, except: %i(new show)
     resources :stars, only: :index
+    resources :users_relationships, only: %i(create destroy)
   end
 end

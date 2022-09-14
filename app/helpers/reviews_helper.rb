@@ -25,4 +25,9 @@ module ReviewsHelper
     end
     html
   end
+
+  def get_time_create review
+    words = review.created_at.in_time_zone(Settings.time_zone).to_s.split
+    words[1] << " " << words[0]
+  end
 end

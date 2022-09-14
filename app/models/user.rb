@@ -61,4 +61,20 @@ class User < ApplicationRecord
 
     BCrypt::Password.new(digest).is_password? token
   end
+
+  def feed
+    Review.by_user_ids(following_ids << id).order_by_time_created
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include? other_user
+  end
 end
