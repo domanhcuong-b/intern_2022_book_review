@@ -28,6 +28,7 @@ en:
   following: "Following"
   name: "Name"
   email: "Email"
+  admin_interface: "Admin interface"
   static_pages:
     home:
       quotes: "With books you can go places"
@@ -78,3 +79,8 @@ en:
   users_relationships:
     followed_user_not_found: "Not found followed user"
     not_found_relationship: "Not found relationship with this user"
+  admin:
+    manage_user: "Manage user"
+    manage_book: "Manage book"
+    manage_genre: "Manage genre"
+    user_interface: "User interface"

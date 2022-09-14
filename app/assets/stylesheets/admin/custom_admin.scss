@@ -1,0 +1,19 @@
+#wrapper {
+	.admin-sidebar-wrapper {
+		width: 250px !important;
+	}
+
+	.admin-page-content-wrapper {
+		#page-container {
+			width: calc(100% - 250px) !important;
+			float: right;
+			#container {
+
+			}
+		}
+	}
+}
+
+.test-css {
+	color: red;
+}
