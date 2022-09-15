@@ -25,4 +25,9 @@ module ReviewsHelper
     end
     html
   end
+
+  def get_time_create review
+    review.created_at.in_time_zone(Settings.time_zone)
+          .strftime("%H:%M %Y-%m-%d")
+  end
 end

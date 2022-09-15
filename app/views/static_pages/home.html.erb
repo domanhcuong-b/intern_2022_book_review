@@ -1,1 +1,17 @@
-<h2><%= t "home" %></h2>
+<ul class="page-header">
+  <li><h2 class="page-title"><%= t "home" %></h2></li>
+  <%= render "shared/language" %>
+</ul>
+<% if logged_in? %>
+  <div id="feed" class="information-detail">
+    <div id="review-container">
+      <div id="reviews_list">
+        <%= render partial: "reviews/reviews",
+                   locals: {reviews: @feed_items, show_book_title: true} %>
+        <%== pagy_nav @pagy %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <%= t ".welcome" %>
+<% end %>

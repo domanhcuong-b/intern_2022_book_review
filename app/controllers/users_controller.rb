@@ -6,14 +6,4 @@ class UsersController < ApplicationController
     @pagy, @reviews = pagy all_reviews,
                            items: Settings.review.REVIEW_PER_PAGE
   end
-
-  private
-
-  def find_user_by_params_id
-    @user = User.find_by id: params[:id]
-    return if @user
-
-    flash[:warning] = t "users.user_not_found"
-    redirect_to root_path
-  end
 end

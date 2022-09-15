@@ -65,4 +65,20 @@ class User < ApplicationRecord
   def had_review? book_id
     reviews.find_by book_id: book_id
   end
+
+  def feed
+    Review.by_user_id(following_ids << id).order_by_time_created
+  end
+
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include? other_user
+  end
 end

@@ -59,7 +59,7 @@
       <%= link_to t(".all_reviews"), book_path(@book), class: "green bold" %>:
       <%= @pagy.count %>
     </span>
-    <% unless @reviews_of_book.blank? %>
+    <% if @reviews.present? %>
       <%= render "reviews/statistic_review" %>
       <div id="reviews_list">
         <%= render partial: "reviews/reviews",

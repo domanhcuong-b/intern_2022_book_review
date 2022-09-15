@@ -1,0 +1,13 @@
+<div class="user-card">
+  <div class="user-avatar">
+    <%= image_tag user.picture_url, alt: t("avatar") %>
+  </div>
+  <div class="other-infor">
+    <div class="infor-row">
+      <%= link_to user.name, user_path(user), class: "green bold" %>
+    </div>
+    <div class="infor-row">
+      <span class="nunito"><%= user.email %></span>
+    </div>
+  </div>
+</div>

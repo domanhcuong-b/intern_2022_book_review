@@ -11,3 +11,6 @@ book:
   BOOK_PER_PAGE: 24
 review:
   REVIEW_PER_PAGE: 5
+follow:
+  USER_PER_PAGE: 24
+time_zone: "Asia/Ho_Chi_Minh"
