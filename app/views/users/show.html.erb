@@ -4,7 +4,7 @@
 </ul>
 <div id="personal-page" class="information-detail">
   <div id="user-information" class="information bold nunito">
-    <%= image_tag @user.picture_url, alt: t("avatar") %>
+    <%= image_tag get_avatar_url(@user), alt: t("avatar") %>
     <div class="other-infor">
       <div class="infor-row">
         <span><%= t "name" %>:</span>

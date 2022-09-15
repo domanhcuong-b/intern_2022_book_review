@@ -1,0 +1,16 @@
+<%= form_for [:admin, @book], html: {multipart: true} do |f| %>
+  <%= f.text_field :title, placeholder: "Book's title..." %>
+  <%= f.select :author_ids, options_for_select(Author.pluck(:name, :id)), {}, {class: "chosen-select", multiple: true} %>
+  <%= f.select :genre_ids, options_for_select(Genre.pluck(:name, :id)), {}, {class: "chosen-select", multiple: true} %>
+  <%= f.text_field :total_pages, placeholder: "Total pages..." %>
+  <%= f.text_area :description, placeholder: "Description..." %>
+
+  <span class="picture">
+    <%= t "upload_book_cover" %>
+    <%= f.fields_for :picture do |picture_form| %>
+      <%= picture_form.file_field :url, accept: Settings.image.ACCEPT_IMG_TYPE %>
+    <% end %>
+  </span>
+  <%= f.submit t("post"), class: "btn btn-primary my-button" %>
+<% end %>
+

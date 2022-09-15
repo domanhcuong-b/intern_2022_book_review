@@ -1,10 +1,10 @@
-User.create!(name: "Đỗ Mạnh Cường",
+admin = User.create!(name: "Đỗ Mạnh Cường",
              email: "docuong8a2@gmail.com",
              password: "12345678",
              password_confirmation: "12345678",
              role: 1,
              picture_attributes:
-               {url: "https://i.postimg.cc/yxmWPTJ8/avatar-example.jpg"})
+               {url: Rails.root.join("app/assets/images/admin_avatar.jpg").open})
 
 rowling = Author.create!(name: "J.K.Rowling")
 
@@ -26,7 +26,7 @@ Quite literally, in the case of this cover, which shows Harry underwater, bravin
                                    total_pages: 636,
                                    description: description,
                                    picture_attributes:
-                                     {url: "https://i.ibb.co/ZhGHDz2/English-Harry-Potter-4-Epub-9781781105672.jpg"})
+                                     {url: Rails.root.join("app/assets/images/harry_potter_cover.jpg").open})
   harry_potter_book.genres << harry_potter_genres[n % 30]
   harry_potter_book.authors << rowling
 end
@@ -41,7 +41,7 @@ end
                password: password,
                password_confirmation: password,
                picture_attributes:
-                 {url: "https://i.ibb.co/F4ym3F0/cat.webp"})
+                 {url: Rails.root.join("app/assets/images/normal_user_avatar.png").open})
 end
 
 # Add review

@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
   include UsersHelper
   include ReviewsHelper
+  include BooksHelper
   before_action :set_locale
 
   private

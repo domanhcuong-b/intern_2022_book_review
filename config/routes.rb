@@ -17,7 +17,8 @@ Rails.application.routes.draw do
 
     namespace :admin do
       root "static_pages#index"
-      resources :static_pages
+      resources :static_pages, only: :index
+      resources :books, except: :show
     end
   end
 end

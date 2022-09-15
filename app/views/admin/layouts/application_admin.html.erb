@@ -16,12 +16,16 @@
     <div id="page-content-wrapper" class="admin-page-content-wrapper">
       <div id="page-container">
         <div id="container">
-          <h1 id="name-app-header"><%= t "app_name" %></h1>
+          <h1 id="name-app-header"><%= t "admin_interface" %></h1>
           <% flash.each do |message_type, message| %>
             <div class="alert alert-<%= message_type %>">
               <%= message %>
             </div>
           <% end %>
+          <ul class="page-header">
+            <li><h2 class="page-title"><%= yield :page_title %></h2></li>
+            <%= render "shared/language" %>
+          </ul>
           <%= yield %>
         </div>
       </div>

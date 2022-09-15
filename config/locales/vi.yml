@@ -28,6 +28,8 @@ vi:
   following: "Số người bạn đang theo dõi"
   name: "Tên"
   email: "Email"
+  admin_interface: "Giao diện admin"
+  upload_book_cover: "Tải bìa sách"
   static_pages:
     home:
       quotes: "Sách mở mang tầm nhìn của bạn"
@@ -78,3 +80,26 @@ vi:
   users_relationships:
     followed_user_not_found: "Không tìm thấy người mà bạn đang theo dõi"
     not_found_relationship: "Không tìm thấy mối quan hệ với người dùng "
+  admin:
+    manage_user: "Người dùng"
+    manage_book: "Sách"
+    manage_genre: "Thể loại sách"
+    user_interface: "Giao diện user"
+    books:
+      index:
+        title: "Tiêu đề"
+        author: "Tác giả"
+        genre: "Thể loại"
+        total_pages: "Số trang"
+        number_of_review: "Lượng đánh giá"
+        average_rating: "Điểm trung bình"
+        is_lock: "Khóa đánh giá"
+        more_action: "Hành động"
+        add_new_book: "Thêm sách"
+      create:
+        create_success: "Thêm sách thành công."
+        create_fail: "Thêm sách thất bại, mời thử lại."
+      destroy:
+        success: "Xóa sách thành công."
+        fail: "Xóa sách thất bại."
+        are_you_sure: "Bạn chắc chắn muốn xóa cuốn sách này?"

@@ -29,7 +29,7 @@ class User < ApplicationRecord
 
   attr_accessor :remember_token
 
-  delegate :url, to: :picture, prefix: true
+  delegate :url, to: :picture, prefix: true, allow_nil: true
 
   class << self
     def digest token

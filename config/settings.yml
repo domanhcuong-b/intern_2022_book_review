@@ -14,3 +14,7 @@ review:
 follow:
   USER_PER_PAGE: 24
 time_zone: "Asia/Ho_Chi_Minh"
+image:
+  ACCEPT_IMG_TYPE: "image/jpg,image/jpeg,image/gif,image/png"
+  IMG_EXTENSION_ALLOW: <%= %w(jpg jpeg gif png) %>
+  PICTURE_MAX_SIZE: 5

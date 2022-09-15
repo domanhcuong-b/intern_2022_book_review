@@ -18,7 +18,7 @@ module UsersHelper
   def get_avatar_url user
     return "avatar_example.png" unless user.picture
 
-    user.picture_url
+    user.picture_url.url
   end
 
   def can_delete_review? review

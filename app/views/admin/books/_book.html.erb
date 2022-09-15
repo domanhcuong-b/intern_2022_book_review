@@ -1,0 +1,14 @@
+<tr>
+  <td><%= book.title %></td>
+  <td><%= get_authors_name book %></td>
+  <td><%= get_genres_name book %></td>
+  <td><%= get_total_pages book %></td>
+  <td><%= book.reviews.count %></td>
+  <td><%= get_average_rating book %></td>
+  <td><%= book.lock_reviewing %></td>
+  <td>
+    <%= link_to t("delete"), admin_book_path(book), method: :delete,
+                data: {confirm: t("admin.books.destroy.are_you_sure")} %>
+    <%= link_to t("update"), edit_admin_book_path(book) %>
+  </td>
+</tr>

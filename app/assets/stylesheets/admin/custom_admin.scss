@@ -8,7 +8,26 @@
 			width: calc(100% - 250px) !important;
 			float: right;
 			#container {
+				.page-header {
+					padding: 0 !important;
+				}
 
+				.header {
+					display: flex;
+					margin: 24px 0;
+
+					#search-book-form {
+						flex: 4;
+						margin: 0 !important;
+					}
+
+					#add-book-button {
+						flex: 1;
+						a {
+							float: right;
+						}
+					}
+				}
 			}
 		}
 	}

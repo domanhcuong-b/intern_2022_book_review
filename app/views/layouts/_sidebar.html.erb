@@ -1,7 +1,7 @@
 <div id="sidebar-wrapper">
   <div class="sidebar-avatar">
-    <% if logged_in? %>
-      <%= image_tag current_user.picture_url, alt: t("avatar"), class: "avatar" %>
+    <% if logged_in? && current_user.picture %>
+      <%= image_tag current_user.picture_url.url, alt: t("avatar"), class: "avatar" %>
     <% else %>
       <%= image_tag "avatar_example.png", alt: t("avatar"), class: "avatar" %>
     <% end %>

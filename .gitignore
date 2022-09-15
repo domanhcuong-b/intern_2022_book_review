@@ -10,6 +10,7 @@
 /tmp/
 /.idea/
 /log/
+/public/uploads/
 
 # Ignore Byebug command history file.
 .byebug_history

@@ -18,7 +18,7 @@ module BooksHelper
   def get_cover_url book
     return "cover_default.png" unless book.picture
 
-    book.picture_url
+    book.picture_url.url
   end
 
   def get_average_rating book
@@ -31,5 +31,13 @@ module BooksHelper
     return t "updating" unless book.total_pages
 
     book.total_pages
+  end
+
+  def find_book_by_id
+    @book = Book.find_by id: params[:id]
+    return if @book
+
+    flash[:warning] = t "books.book_not_found"
+    redirect_to books_path
   end
 end
