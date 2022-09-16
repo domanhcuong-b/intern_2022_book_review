@@ -28,6 +28,8 @@ en:
   following: "Following"
   name: "Name"
   email: "Email"
+  admin_interface: "Admin interface"
+  upload_book_cover: "Upload book's cover"
   static_pages:
     home:
       quotes: "With books you can go places"
@@ -78,3 +80,26 @@ en:
   users_relationships:
     followed_user_not_found: "Not found followed user"
     not_found_relationship: "Not found relationship with this user"
+  admin:
+    manage_user: "Manage user"
+    manage_book: "Manage book"
+    manage_genre: "Manage genre"
+    user_interface: "User interface"
+    books:
+      index:
+        title: "Title"
+        author: "Author"
+        genre: "Genre"
+        total_pages: "Total pages"
+        number_of_review: "Number of reviews"
+        average_rating: "Average rating"
+        is_lock: "Is lock"
+        more_action: "More action"
+        add_new_book: "Add book"
+      create:
+        create_success: "Create new book successfully"
+        create_fail: "Create new book fail"
+      destroy:
+        success: "Delete book successfully"
+        fail: "Delete book fail"
+        are_you_sure: "Are you sure to delete this book?"

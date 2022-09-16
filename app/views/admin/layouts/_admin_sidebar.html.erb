@@ -1,0 +1,14 @@
+<div id="sidebar-wrapper" class="admin-sidebar-wrapper">
+  <div class="sidebar-avatar">
+    <%= image_tag get_avatar_url(current_user),
+                  alt: t("avatar"), class: "avatar" %>
+  </div>
+  <ul class="sidebar-nav">
+    <li><%= link_to t("home"), admin_root_path %></li>
+    <li><%= link_to t("admin.manage_user"), "#" %></li>
+    <li><%= link_to t("admin.manage_book"), admin_books_path %></li>
+    <li><%= link_to t("admin.manage_genre"), "#" %></li>
+    <li><%= link_to t("admin.user_interface"), root_path %></li>
+    <li><%= link_to t("log_out"), logout_path, method: :delete %></li>
+  </ul>
+</div>

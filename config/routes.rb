@@ -14,5 +14,11 @@ Rails.application.routes.draw do
     resources :reviews, except: %i(new show)
     resources :stars, only: :index
     resources :users_relationships, only: %i(create destroy)
+
+    namespace :admin do
+      root "static_pages#index"
+      resources :static_pages, only: :index
+      resources :books, only: :index
+    end
   end
 end
